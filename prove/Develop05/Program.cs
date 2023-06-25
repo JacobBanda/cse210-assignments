@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-// Main program
 public class Program
 {
     private static List<Goal> goals = new List<Goal>();
@@ -301,7 +300,7 @@ private static void LoadGoals()
     }
 }
 
-// Base class for all goals
+// Base class
 public abstract class Goal
 {
     public string Name { get; protected set; }
@@ -321,7 +320,7 @@ public abstract class Goal
     public abstract string GetStatus();
 }
 
-// Simple goal that can be marked complete and gives points
+
 public class SimpleGoal : Goal
 {
     public SimpleGoal(string name, string desc, int value) : base(name, desc, value)
@@ -352,7 +351,7 @@ public class SimpleGoal : Goal
 
 }
 
-// Eternal goal that gives points every time it is recorded
+
 public class EternalGoal : Goal
 {
     public EternalGoal(string name, string desc, int value) : base(name, desc, value)
@@ -375,7 +374,7 @@ public class EternalGoal : Goal
     }
 }
 
-// Checklist goal that must be accomplished a certain number of times
+
 public class ChecklistGoal : Goal
 {
     public int completionCount;
